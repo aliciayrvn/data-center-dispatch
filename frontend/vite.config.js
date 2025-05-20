@@ -8,7 +8,8 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     watch: {
-        usePolling: true
-      }
+      usePolling: true
+    },
+    allowedHosts: ['data-center-dispatch-2.onrender.com'] // <- добавь сюда твой хост
   }
 })
