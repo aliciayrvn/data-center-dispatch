@@ -21,7 +21,7 @@
 ### 1. Клонируйте репозиторий
 
 ```sh
-git clone https://github.com/aliciayrvn/data-center-dispatch)
+git clone https://github.com/aliciayrvn/data-center-dispatch
 cd data-center-dispatch
 ```
 
