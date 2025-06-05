@@ -32,6 +32,10 @@ class Server(ServerBase):
     cpu_load: float
     ram_usage: float
     vms: List[VM] = []
+    vms: List[VM] = []
+    ip: Optional[str] = None
+    os: Optional[str] = None
+    uptime: Optional[str] = None
 
     class Config:
         orm_mode = True

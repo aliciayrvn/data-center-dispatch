@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Card, message } from 'antd';
+import API from '../api';
 
 export default function LoginForm({ onLogin }) {
   const [loading, setLoading] = useState(false);
 
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     setLoading(true);
-    // Мок-логика: логин admin, пароль 1234
-    setTimeout(() => {
-      setLoading(false);
-      if (values.username === 'admin' && values.password === '1234') {
-        onLogin();
-      } else {
-        message.error('Неверный логин или пароль');
-      }
-    }, 700);
+    try {
+      const params = new URLSearchParams();
+      params.append('username', values.username);
+      params.append('password', values.password);
+      const res = await API.post('/auth/login', params, {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+      localStorage.setItem('token', res.data.access_token);
+      onLogin();
+    } catch (e) {
+      message.error('Неверный логин или пароль');
+    }
+    setLoading(false);
   };
 
   return (
