@@ -1,0 +1,4 @@
+# file: /Users/aliciayrvn/Downloads/data-center-dispatch/backend/app/routers/vms.py
+# hypothesis_version: 6.135.1
+
+['/', '/vms', '/{vm_id}', '/{vm_id}/start', '/{vm_id}/stop', 'vms']

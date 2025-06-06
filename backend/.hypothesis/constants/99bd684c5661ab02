@@ -1,0 +1,4 @@
+# file: /Users/aliciayrvn/Downloads/data-center-dispatch/backend/app/routers/servers.py
+# hypothesis_version: 6.135.1
+
+['/', '/servers', '/{server_id}', '192.168.0.17', 'servers']

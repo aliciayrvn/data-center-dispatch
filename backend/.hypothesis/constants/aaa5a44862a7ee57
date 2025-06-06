@@ -1,0 +1,4 @@
+# file: /Users/aliciayrvn/Downloads/data-center-dispatch/backend/app/utils/monitor.py
+# hypothesis_version: 6.135.1
+
+[0.0, 0.5, 3600, 86400, 'cpu_load', 'id', 'ip', 'name', 'os', 'ram_usage', 'sensors_temperatures', 'status', 'temperature', 'uptime', 'vms', 'недоступно']
